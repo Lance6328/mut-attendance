@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "MUT Attendance",
+    "slug": "mut-attendance",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Camera access is used to scan attendance QR codes.",
+        "NSLocationWhenInUseUsageDescription": "Location is used only while scanning, to confirm you are in the lecture hall."
+      }
+    },
+    "android": {
+      "permissions": ["CAMERA", "ACCESS_FINE_LOCATION"],
+      "package": "ac.ke.mut.attendance"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Location is used only while scanning, to confirm you are in the lecture hall."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Camera access is used to scan attendance QR codes."
+        }
+      ]
+    ]
+  }
+}
